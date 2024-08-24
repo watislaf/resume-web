@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaCheck } from 'react-icons/fa';
-
+import { CiGlobe } from "react-icons/ci";
 import {
     RedBadge, YellowBadge, GreenBadge, BlueBadge, IndigoBadge, PurpleBadge, PinkBadge
 } from './Badges';
@@ -49,7 +49,7 @@ const badges = [
 
 const AboutMe: React.FC = () => {
     return (
-        <div className="mb-6 animate-fadeInRight" style={{ animationDelay: `${1.4}s` }}   >
+        <div className="my-6 animate-fadeInRight" style={{ animationDelay: `${1.4}s` }}   >
             <h2 className="text-xl font-semibold mb-2 inline-block transition-all duration-300 ease-in-out   cursor-default ">About Me 🌟</h2>
             <p className="text-blue-50">I’m a team player who loves getting things done. I’m always looking to improve myself and the team. I believe programmers sometimes focus too much on code and forget about the cost and profit, which can lead to overengineering.</p>
             <p className="text-blue-50">I aim to find a balanced approach, making the code better and the product more profitable.</p>
@@ -68,21 +68,41 @@ const categorizedSkills = {
 
 const Experience: React.FC = () => {
     return (
-        <div className="animate-fadeInRight" style={{ animationDelay: `1.8s` }}>
-
+        <div className="animate-fadeInRight" style={{animationDelay: `1.8s`}}>
             <h2 className="text-xl font-semibold mb-2 inline-block transition-all duration-300 ease-in-out cursor-default ">Experience</h2>
-            <p className="pb-4">I&apos;ve been a Full-Stack Developer for 3 years, working on a variety of projects from large
+            <p className="pb-4">I&apos;ve been a Full-Stack Developer for 3 years, working on a variety of projects from
+                large
                 products to startups.</p>
 
-            <div className="flex flex-row gap-2 flex-wrap mb-2">
-            {Object.entries(categorizedSkills).map(([category, skills], index) =>  skills.map((skill) => {
-                            const BadgeComponent = badges[index];
-                            return <BadgeComponent key={index} skill={skill}/>;
-                        }
+            <div className="flex flex-row gap-2 flex-wrap mb-6">
+                {Object.entries(categorizedSkills).map(([category, skills], index) => skills.map((skill) => {
+                        const BadgeComponent = badges[index];
+                        return <BadgeComponent key={index} skill={skill}/>;
+                    }
                 ))}
             </div>
-
-
+        </div>
+    );
+}
+const Languages: React.FC = () => {
+    return (
+        <div className="my-6">
+            <h2 className="text-xl font-semibold mb-2 inline-block transition-all duration-300 ease-in-out animate-fadeInUp"
+                style={{animationDelay: '1.2s'}}>Languages</h2>
+            <ul className="space-y-2">
+                <li className="flex items-center animate-fadeInUp" style={{animationDelay: '1.2s'}}>
+                    <CiGlobe className="h-5 w-5 mr-2 text-blue-300"/>
+                    <span>Polish (Native)</span>
+                </li>
+                <li className="flex items-center animate-fadeInUp" style={{animationDelay: '1.3s'}}>
+                    <CiGlobe className="h-5 w-5 mr-2 text-blue-300"/>
+                    <span>Russian (Native)</span>
+                </li>
+                <li className="flex items-center animate-fadeInUp" style={{animationDelay: '1.4s'}}>
+                    <CiGlobe className="h-5 w-5 mr-2 text-blue-300"/>
+                    <span>English (C1)</span>
+                </li>
+            </ul>
         </div>
     );
 }
@@ -90,7 +110,8 @@ const Experience: React.FC = () => {
 const Profile: React.FC = () => {
     return (
         <section className="bg-gradient-to-b from-blue-600 to-blue-800 text-white p-6 rounded-lg animate-slideInRight">
-            <div className="text-center flex mb-6  flex-wrap gap-5 animate-fadeInRight" style={{ animationDelay: `0.3s` }} >
+            <div className="text-center flex mb-6  flex-wrap gap-5 animate-fadeInRight"
+                 style={{animationDelay: `0.3s`}}>
                 <div className="content-center gap-4 flex-1 flex-col flex">
                     <div>
                         <h1 className="text-2xl font-bold transition-transform duration-300 ease-in-out hover:scale-110">Vladislav
@@ -108,26 +129,28 @@ const Profile: React.FC = () => {
                     </div>
 
                     <div className='self-center gap-5  flex-wrap justify-center flex'>
-                    <ContactItem icon={<FaEnvelope/>} text="watislaf@gmail.com" delay={1.2}/>
-                    <ContactItem
-                        icon={<FaLinkedin/>}
-                        text="LinkedIn"
-                        href="https://www.linkedin.com/in/watislaf"
-                        delay={1.3}
-                    />
-                    <ContactItem
-                        icon={<FaGithub/>}
-                        text="GitHub"
-                        href="https://github.com/watislaf"
-                        delay={1.4}
-                    />
+                        <ContactItem icon={<FaEnvelope/>} text="watislaf@gmail.com" delay={1.2}/>
+                        <ContactItem
+                            icon={<FaLinkedin/>}
+                            text="LinkedIn"
+                            href="https://www.linkedin.com/in/watislaf"
+                            delay={1.3}
+                        />
+                        <ContactItem
+                            icon={<FaGithub/>}
+                            text="GitHub"
+                            href="https://github.com/watislaf"
+                            delay={1.4}
+                        />
                     </div>
                 </div>
             </div>
             <AboutMe/>
+           <Languages/>
             <Experience/>
         </section>
     );
 }
 
 export default Profile;
+[]

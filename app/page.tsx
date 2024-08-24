@@ -24,6 +24,9 @@ export default function Portfolio() {
                     </div>
                     <Projects/>
                     <Summarizations/>
+                    <div className="text-gray-500">
+                        Thanks in advance.
+                    </div>
                 </div>
             </div>
     </div>
