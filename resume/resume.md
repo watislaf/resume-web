@@ -111,7 +111,7 @@ I've worked full-time since my first year of studies. I considered dropping out 
 
 ### Childhood
 
-I started programming when I was 14 years old. I graduated from one of the best lyceums in Belarus and won a silver medal in the Republic Olympiad in Belarus when I was 17\.
+I started programming when I was 14 years old. I graduated from one of the best lyceums in Belarus and won a silver medal in the Republic Olympiad in Belarus when I was 17.
 
 ---
 

@@ -44,8 +44,7 @@ const Summarizations: React.FC = () => {
             <div className="grid md:grid-cols-1 gap-8 mb-8">
                 <SummarizationItem title="Childhood">
                     <p >I started programming when I was 14 years old. I graduated from one of the best
-                        lyceums in Belarus and won a silver medal in the Republic Olympiad in Belarus when I was 17. My
-                        parents are half Polish, and I moved back to Poland when I was 18.</p>
+                        lyceums in Belarus and won a silver medal in the Republic Olympiad in Belarus when I was 17.</p>
                 </SummarizationItem>
             </div>
 
